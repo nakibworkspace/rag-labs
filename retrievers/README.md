@@ -6,6 +6,8 @@ This lab covers retrieval patterns, the final stage of the RAG pipeline. After s
 
 This lab covers multiple retrieval strategies, from basic similarity search to advanced techniques like contextual compression and multi-query retrieval.
 
+![dia2](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/retrievers/assets/rag4-2.drawio.svg)
+
 **Prerequisites:** Completion of Labs 1-3 (Document Loaders, Text Splitting, Vector Stores), or equivalent knowledge of loading, splitting, and storing documents.
 
 ## Learning Objectives
@@ -55,6 +57,8 @@ export OPENAI_API_KEY="your-api-key-here"
 ## Chapter 1: Retrieval Fundamentals
 
 Before implementing advanced patterns, establish the fundamentals of retrieval in RAG systems.
+
+![dia1](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/retrievers/assets/rag4-1.drawio.svg)
 
 ### 1.1 What You Will Build
 
@@ -174,6 +178,8 @@ print(answer)
 ## Chapter 2: MultiQuery Retrieval
 
 MultiQueryRetriever generates multiple versions of the query to improve recall.
+
+![dia3](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/retrievers/assets/rag4-3.drawio.svg)
 
 ### 2.1 What You Will Build
 
@@ -295,6 +301,8 @@ print(f"Additional sources from MultiQuery: {multiquery_sources - standard_sourc
 ## Chapter 3: Contextual Compression
 
 Sometimes retrieved documents contain relevant content mixed with noise. Contextual compression filters to keep only relevant passages.
+
+![dia4](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/retrievers/assets/rag4-4.drawio.svg)
 
 ### 3.1 What You Will Build
 

@@ -4,6 +4,8 @@
 
 This lab introduces Retrieval-Augmented Generation (RAG), a powerful architecture that combines large language models with external knowledge bases. You will learn the fundamental concepts of RAG and implement document loaders to ingest various data sources into your application.
 
+![dia1](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/introduction/assets/rag1-1.drawio.svg)
+
 This lab approaches RAG by building each component step-by-step, giving you a complete understanding of how data flows through the system. By the end, you will have a working document loading pipeline that can be extended into a full RAG application.
 
 **Prerequisites:** Basic Python knowledge including functions, classes, and working with packages. Familiarity with JSON and file operations is helpful.
@@ -128,6 +130,8 @@ print(f"Source file: {doc.metadata['source']}")
 
 ---
 
+![dia1](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/introduction/assets/rag1-2.drawio.svg)
+
 ## Chapter 2: Loading PDF Documents
 
 PDFs are a common format for academic papers, reports, and documentation. LangChain provides specialized loaders for different document types.
@@ -223,6 +227,11 @@ for i, doc in enumerate(lazy_docs):
         print("  ... (more documents available)")
         break
 ```
+
+### 2.4 Why Lazy Loading?
+Lazy loading in RAG (Retrieval-Augmented Generation) is an optimization technique that defers loading data, documents, or vector segments until the exact moment they are needed, rather than loading everything upfront. This reduces RAM usage, minimizes initial startup latency, and streamlines performance by only retrieving necessary, context-relevant information.
+
+![dia3](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/introduction/assets/rag1-3.drawio.svg)
 
 ### 2.4 Checkpoint
 

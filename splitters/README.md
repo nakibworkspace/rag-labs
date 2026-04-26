@@ -4,6 +4,8 @@
 
 This lab covers text splitting, the second critical stage of the RAG pipeline. After loading documents, you must divide them into smaller chunks that can be embedded and searched effectively. The way you split text directly impacts retrieval quality and downstream application performance.
 
+![dia1](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/splitters/assets/rag2-1.drawio.svg)
+
 This lab teaches multiple splitting strategies, from simple character-based approaches to sophisticated semantic chunking that respects document structure.
 
 **Prerequisites:** Completion of Lab 1 (Document Loaders) or equivalent knowledge of loading documents with LangChain.
@@ -93,7 +95,14 @@ Key parameters that control splitting behavior:
 | chunk_overlap | Characters shared between adjacent chunks | 0-200 |
 | separator | Character(s) to split on | "\n\n", "\n", " " |
 
-### 1.4 Implementation: Basic Chunk Exploration
+
+### 1.4 What is Chunk Overlap?
+In RAG chunk overlap is a practice of maintaining shared text between consecutive document chunks (typically 10–20% of the chunk size) to ensure semantic context is preserved across boundaries. It prevents losing information split between segments, improving retrieval accuracy for context-dependent data, though too much overlap adds redundant noise.
+
+![dia2](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/splitters/assets/rag2-2.drawio.svg)
+
+
+### 1.5 Implementation: Basic Chunk Exploration
 
 Create `chunk_explorer.py` to understand how splitting works:
 
@@ -145,7 +154,7 @@ The exact number depends on the text, but with chunk_size=200 and the paragraph 
 
 </details>
 
-### 1.5 Checkpoint
+### 1.6 Checkpoint
 
 **Self-Assessment:**
 - [ ] You understand why chunk_size and chunk_overlap matter
@@ -157,6 +166,8 @@ The exact number depends on the text, but with chunk_size=200 and the paragraph 
 ## Chapter 2: Recursive Text Splitting
 
 Recursive splitting attempts multiple separators in sequence, falling back to smaller separators when needed.
+
+![dia3](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/splitters/assets/rag2-3.drawio.svg)
 
 ### 2.1 Think First: Why Use Multiple Separators?
 
@@ -475,6 +486,8 @@ print(code_chunks[0])
 ## Chapter 4: Semantic Chunking
 
 Semantic chunking uses embedding similarity to identify natural topic boundaries rather than relying on character counts.
+
+![dia4](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/splitters/assets/rag2-4.drawio.svg)
 
 ### 4.1 What You Will Build
 

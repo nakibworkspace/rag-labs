@@ -4,6 +4,8 @@
 
 This lab covers vector stores, the third critical stage of the RAG pipeline. After splitting text into chunks, you must convert those chunks into vector embeddings and store them in a database optimized for similarity search. Vector stores enable fast, semantic retrieval of relevant documents based on query similarity.
 
+![dia1](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/vector-store/assets/rag3-1.drawio.svg)
+
 This lab teaches you to work with embedding models, create and query vector stores, and perform filtered searches using metadata.
 
 **Prerequisites:** Completion of Lab 1 (Document Loaders) and Lab 2 (Text Splitting), or equivalent knowledge of loading and splitting documents.
@@ -291,6 +293,8 @@ print(f"Loaded FAISS index with {loaded_store.index.ntotal} documents")
 ## Chapter 3: Similarity Search
 
 Now learn to query your vector store to retrieve relevant documents.
+
+![dia2](https://raw.githubusercontent.com/nakibworkspace/rag-labs/34d6cbad9a47f4dcaadc2a9d5f0e6692be06f76f/vector-store/assets/rag3-2.drawio.svg)
 
 ### 3.1 What You Will Build
 
