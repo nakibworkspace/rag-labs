@@ -164,7 +164,7 @@ Create `pdf_loader.py`:
 from langchain_community.document_loaders import PyPDFLoader
 
 # Initialize the loader with the PDF file path
-loader = PyPDFLoader("data/medical_paper.pdf")
+loader = PyPDFLoader("path to pdf")
 
 # Load all pages
 docs = loader.load()
